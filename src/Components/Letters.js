@@ -6,7 +6,7 @@ class componentName extends Component {
     return (
       <div>
         <div>Letters left:</div>
-        <Letter />
+        <div>{Object.entries(this.props.letterStatus).map(([l,bool]) => bool ? <Letter letter= {l} chosen={true} key={l} /> : <Letter letter={l} choosen={false} key={l}/>)}</div>
       </div>
     );
   }
